@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/main-content}">
+
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${product.name}">Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="/css/product-detail.css">
+</head>
+
+<body>
+<div layout:fragment="content">
+
+    <!-- NÚT QUAY LẠI -->
+    <a href="javascript:history.back()" class="back-btn">← Quay lại</a>
+
+    <div class="pd-container">
+
+        <!-- ẢNH -->
+        <div class="pd-image">
+            <img th:src="${product.image}" alt="Ảnh sản phẩm">
+        </div>
+
+        <!-- THÔNG TIN -->
+        <div class="pd-info">
+            <h1 th:text="${product.name}"></h1>
+
+            <div class="pd-price"
+                 th:text="${#numbers.formatDecimal(product.price,0,'COMMA',0,'POINT')} + ' đ'">
+            </div>
+
+            <p class="pd-desc" th:text="${product.description}"></p>
+
+            <div class="pd-actions">
+                <button class="btn-buy"
+                        th:onclick="'buyNow(' + ${product.id} + ')'">
+                    Mua ngay
+                </button>
+
+                <button class="btn-cart"
+                        th:onclick="'addToCart(' + ${product.id} + ')'">
+                    🛒 Thêm vào giỏ
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="/js/product-detail.js"></script>
+</body>
+</html>

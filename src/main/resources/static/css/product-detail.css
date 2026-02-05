@@ -1,0 +1,89 @@
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    color: red;
+}
+
+.pd-container {
+    display: flex;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+/* IMAGE */
+.pd-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.pd-image img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* INFO */
+.pd-info {
+    flex: 1;
+}
+
+.pd-info h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.pd-price {
+    font-size: 24px;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.pd-desc {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
+.pd-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-buy {
+    background: black;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-cart {
+    background: white;
+    border: 1px solid #333;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-buy:hover {
+    background: #333;
+}
+
+.btn-cart:hover {
+    background: #f5f5f5;
+}
